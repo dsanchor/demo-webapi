@@ -91,7 +91,3 @@ Enable security:
 Notice that there will be 2 PR:
 - Bump Microsoft.AspNetCore.OpenApi from 7.0.4 to 7.0.9
 - Bump Swashbuckle.AspNetCore from 6.4.0 to 6.5.0
-
-Force a codeql failure by adding the following code to the `WeatherForecastController.cs` file:
-
-```csharp
