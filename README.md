@@ -75,3 +75,23 @@ git branch -M main
 git remote add origin $REPOSITORY
 git push -u origin main
 ```
+
+## Demo
+
+Verify: 
+
+- The GitHub action workflow is triggered and succeeds
+- The webapi is deployed to Azure App Service and is accessible from the webapp url (https://$APP_NAME.azurewebsites.net/weatherforecast)
+
+Enable security:
+- Code Scanning
+- Dependabot (with version updates)
+- Secret scanning
+
+Notice that there will be 2 PR:
+- Bump Microsoft.AspNetCore.OpenApi from 7.0.4 to 7.0.9
+- Bump Swashbuckle.AspNetCore from 6.4.0 to 6.5.0
+
+Force a codeql failure by adding the following code to the `WeatherForecastController.cs` file:
+
+```csharp
