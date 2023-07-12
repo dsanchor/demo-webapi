@@ -38,6 +38,8 @@ az appservice plan create --name $APP_PLAN_NAME --resource-group $RG_NAME --sku 
 
 az webapp create --name $APP_NAME --resource-group $RG_NAME --plan $APP_PLAN_NAME --runtime "DOTNETCORE:7.0"
 
+az webapp config appsettings set --name $APP_NAME --resource-group $RG_NAME --settings WEBSITE_WEBDEPLOY_USE_SCM=true
+
 echo "Web app url: https://$APP_NAME.azurewebsites.net/weatherforecast"
 ```
 
@@ -50,7 +52,7 @@ touch .github/workflows/dotnet.yml
 
 I will create the content of the workflow file using GitHub Copilot chat providing the following input:
 
-- Create a github action workflow for deploying a .net 7 webapi to azure app service. The following parameters are stored as github secrets: `AZURE_CREDENTIALS`, `AZURE_WEBAPP_NAME`.
+- Create a github action workflow for deploying a .net 7 webapi to azure app service. Use login action to login into Azure. The following parameters are stored as github secrets: `AZURE_CREDENTIALS`, `AZURE_WEBAPP_NAME`.
 
 ### Create a Service Principal
 
