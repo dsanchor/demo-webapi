@@ -52,7 +52,7 @@ touch .github/workflows/dotnet.yml
 
 I will create the content of the workflow file using GitHub Copilot chat providing the following input:
 
-- Create a github action workflow for deploying a .net 7 webapi to azure app service. Use login action to login into Azure. The following parameters are stored as github secrets: `AZURE_CREDENTIALS`, `AZURE_WEBAPP_NAME`.
+- Create a github action workflow for building, releasing and deploying a .net 7 webapi to azure app service. Use login action to login into Azure. The following parameters are stored as github secrets: `AZURE_CREDENTIALS`, `AZURE_WEBAPP_NAME`.
 
 ### Create a Service Principal
 
